@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors </title>
+    <style>
+        .box:first-child {
+            background-color: red;           
+        }
+        .box::first-letter{
+            background-color: yellow;
+            font-size: 45px;
+        }
+        .box:first-line{
+            background-color: blue;
+        }
+        [data-color="primary"]{
+            margin: 45px;
+        }
+        *{
+            border: 2px solid black;
+        }
+        .box:nth-child(odd){
+            background-color: aqua;
+        }
+        .box:nth-last-child(1)
+        {background-color: chartreuse;}
+
+        .boxes::before{
+           content: "I am good";
+        }
+        .boxes ::after{
+            content: "I am also good";
+        }
+        ::selection{
+            color: burlywood;
+            background-color: black;
+        }
+        input::placeholder{
+            color: blue;
+            /* font-size: 10px; */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iusto voluptatem nostrum voluptate consequatur eveniet impedit corrupti dicta officiis modi porro aperiam sequi dolorum odio vel placeat dolore accusantium perferendis et ducimus, architecto veniam non perspiciatis. Modi voluptas error, sit sunt unde quidem ratione iusto.</div>
+        <div class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <input type="text" placeholder="Type your name here">
+    </div>
+</body>
+
+</html>
